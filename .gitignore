@@ -77,6 +77,11 @@ target/
 
 # exclude data from source control by default
 /data/
+dataset/
+*.gz
+
+#tmp stuff(maybe model or something else)
+tmp/
 
 # Mac OS-specific storage files
 .DS_Store
@@ -88,11 +93,4 @@ target/
 # Mypy cache
 .mypy_cache/
 
-
-# dataset
-dataset/
-
-# lib
-pyFM/
-tensor-fm/
-tffm/
+# data
