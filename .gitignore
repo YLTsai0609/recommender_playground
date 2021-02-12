@@ -79,6 +79,8 @@ target/
 /data/
 dataset/
 *.gz
+*.npz
+*.npy
 
 #tmp stuff(maybe model or something else)
 tmp/
@@ -93,4 +95,4 @@ tmp/
 # Mypy cache
 .mypy_cache/
 
-# data
+

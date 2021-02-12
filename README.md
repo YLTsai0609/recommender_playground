@@ -13,6 +13,14 @@ This repo could be serval usages :
 
 2. Start to surfing on the research code!
 
+# Best Practice
+
+1. Manage your dataset by soft-link
+2. Put raw data to `dataset`, intermediate data to `project/data`
+3. Always use tiny-piece of data(e.g. 100 samples) to make sure your code worked.
+4. Use [`absl-py`](https://github.com/abseil/abseil-py) to make your argument parse easiler to read.
+5. Use [`wandb`](https://github.com/wandb/client) to track your profiling / experiemtns. so that you can compare your result easily.
+
 # Model Summary
 
 Single line argument about all of the repos we cloned.
@@ -22,6 +30,7 @@ Single line argument about all of the repos we cloned.
 | tffm      | developed in `tf1.8` , support any order interactions and sparse input | proflied by `tffm_profiling/` |
 | tensor-fm | developed in `tf2.4` , wrapper by sklearn, easy to understand          | N/A  |
 |pyFM |developed in python and cython, simple, portable code|N/A|
+|RecModel |developed in cython, torch, SOTA on movielens, including `RecWalk` , `SLIM` |N/A|
 
 # Bemchnark Summary
 
