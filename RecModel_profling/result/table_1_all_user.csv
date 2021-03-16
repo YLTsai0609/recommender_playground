@@ -1,0 +1,4 @@
+Model,training_time(s),inference_time(ms),recall@10,coverage@10
+random,NaN,NaN,0.0104,1.0
+slim,416,0.313,0.260,0.407
+recwalk,0.22,60.6

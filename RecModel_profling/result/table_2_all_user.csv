@@ -1,0 +1,13 @@
+Model,top_n,recall,coverage
+random,5,0.0052,1.0
+random,10,0.0104,1.0
+random,20,0.0209,1.0
+random,50,0.0520,1.0
+slim,5,0.161,0.318
+slim,10,0.260,0.407
+slim,20,0.393,0.510
+slim,50,0.607,0.652
+recwalk,5
+recwalk,10
+recwalk,20
+recwalk,50

@@ -30,7 +30,7 @@ Single line argument about all of the repos we cloned.
 | tffm      | developed in `tf1.8` , support any order interactions and sparse input | proflied by `tffm_profiling/` |
 | tensor-fm | developed in `tf2.4` , wrapper by sklearn, easy to understand          | N/A  |
 |pyFM |developed in python and cython, simple, portable code|N/A|
-|RecModel |developed in cython, torch, SOTA on movielens, including `RecWalk` , `SLIM` |N/A|
+|RecModel |developed in cython, torch, tensorflow SOTA on movielens, including `RecWalk` , `SLIM` |N/profiled by `RecModel_profling`|
 
 # Bemchnark Summary
 
@@ -44,3 +44,10 @@ The integrated dataset so far :
 |--------------------|------|------|
 | MNIST              | 1/22 | N/A  |
 | Movielens(ml-100k) | 1/22 | N/A  |
+| Movielens(ml-20m) | 2/14 | N/A  |
+| Netflix_prize | 2/14 | N/A  |
+| MillionSong | 2/14 | N/A  |
+
+# Reference
+
+[Movielens](https://grouplens.org/datasets/movielens/)

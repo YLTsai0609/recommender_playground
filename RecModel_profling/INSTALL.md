@@ -175,3 +175,50 @@ sparse_tools.pyx
 requirements
 
  [ `sharedmem==0.3.8` ](https://pypi.org/project/sharedmem/0.3/)
+
+# dlopen(mkl_rt.dll, 6): image not found
+
+when running
+ `naive_model_performance = naive_model.eval_topn(test_mat=test_data, topn = np.array([4, 10, 20, 50]), rand_sampled=1000)`
+
+``` 
+
+---------------------------------------------------------------------------
+OSError                                   Traceback (most recent call last)
+~/Desktop/Working_Area/recsys_im/RecModel/RecModel/base_model.py in _mkl(cls)
+    190             try:
+--> 191                 cls._mkl_rt = ctypes.CDLL('libmkl_rt.so')
+    192             except OSError:
+
+~/miniconda3/envs/py_37_ds/lib/python3.7/ctypes/__init__.py in __init__(self, name, mode, handle, use_errno, use_last_error)
+    363         if handle is None:
+--> 364             self._handle = _dlopen(self._name, mode)
+    365         else:
+
+OSError: dlopen(libmkl_rt.so, 6): image not found
+```
+
+it seems we need a `.so` file when running multithreading on `numpy`
+
+[By this](https://gitter.im/eaton-lab/Lobby?at=59cedbd6cfeed2eb65694337)
+
+it seems that my conda doesn't have the `.so` file.
+
+we don't have `.so` but we have `dylib`
+
+ `(base) YuLong@MacBook-Pro:~/Desktop/Working_Area/recsys_im$ find ~/miniconda3/ -name 'libmkl_rt*'`
+
+``` 
+
+/Users/YuLong/miniconda3//pkgs/mkl-2019.4-233/lib/libmkl_rt.dylib
+/Users/YuLong/miniconda3//pkgs/mkl-2019.5-281/lib/libmkl_rt.dylib
+/Users/YuLong/miniconda3//envs/py_37_ds/lib/libmkl_rt.dylib
+
+```
+
+we add `base_model.py` line 198
+
+``` 
+
+cls._mkl_rt = ctypes.CDLL('libmkl_rt.dylib') # yulong
+```
