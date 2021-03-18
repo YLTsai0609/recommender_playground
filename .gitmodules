@@ -7,3 +7,9 @@
 [submodule "pyFM"]
 	path = pyFM
 	url = https://github.com/coreylynch/pyFM.git
+[submodule "tffm"]
+	path = tffm
+	url = https://github.com/geffy/tffm.git
+[submodule "tensor-fm"]
+	path = tensor-fm
+	url = https://github.com/gmodena/tensor-fm
