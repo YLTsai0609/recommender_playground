@@ -4,3 +4,6 @@
 [submodule "Recommender-System"]
 	path = Recommender-System
 	url = https://github.com/SSSxCCC/Recommender-System.git
+[submodule "pyFM"]
+	path = pyFM
+	url = https://github.com/coreylynch/pyFM.git
