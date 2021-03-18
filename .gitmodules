@@ -1,3 +1,6 @@
 [submodule "RecModel"]
 	path = RecModel
 	url = https://github.com/YLTsai0609/RecModel.git
+[submodule "Recommender-System"]
+	path = Recommender-System
+	url = https://github.com/SSSxCCC/Recommender-System.git
