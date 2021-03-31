@@ -95,4 +95,8 @@ tmp/
 # Mypy cache
 .mypy_cache/
 
+# model
+
+model/
+deployed_model/
 
