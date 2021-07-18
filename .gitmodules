@@ -13,3 +13,6 @@
 [submodule "tensor-fm"]
 	path = tensor-fm
 	url = https://github.com/gmodena/tensor-fm
+[submodule "python-topic-modeling"]
+	path = python-topic-modeling
+	url = https://github.com/YLTsai0609/python-topic-modeling.git
